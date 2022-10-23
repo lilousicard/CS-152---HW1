@@ -6,9 +6,13 @@
 
 def cum_sum(lst, limit=0):
 	sum = 0
+	index = 0
 	if limit > 0:
-		for x in range(limit):
+		for x in lst:
+			if(index >= limit):
+				break
 			sum += x
+			index+=1
 	else:
 		for x in lst:
 			sum+=x	
